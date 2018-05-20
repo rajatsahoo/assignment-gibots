@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>degordian</title>
+<!-- Bootstrap -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<!--<link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css"/>-->
+<link rel="stylesheet" href="bootstrap-datetimepicker.min.css"/>
+</head>
+<body>
+<!--  header section-->
+<header>
+  <div class="container">
+    <div class="row">
+      <nav class="navbar" role="navigation">
+        <div class="navbar-header"> <a href="#"><img src="assets/images/Logo.jpg"></a> </div>
+        <div class="col-sm-5 col-md-5">
+          <div class="ui-widget">
+            <div class="form-group">
+              <div class="icon-addon addon-lg">
+                <input type="text" name="search" id="search" class="form-control input-rad" placeholder="Search Calender">
+                <i class="fa fa-search text-right" aria-hidden="true"></i> </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <ul class="nav navbar-right pull-right top-nav" id="bs-example-navbar-collapse-1">
+            <li class="dropdown"> <a class="" href="javascript:;">Settings</a></li>
+            <li class="dropdown"> <a class="" href="javascript:;">Help</a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> <img alt="" class="img-circle" src="assets/images/client-img.png" width="30"> </a>
+              <ul class="dropdown-menu drp">
+                <li class="profedit"><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                <li class="profedit"><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
+                <li class="profedit"><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!--header section end-->
+<section class="portfolio-hdr">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>Portfolio Reviews</h2>
+      </div>
+      <div class="col-sm-4">
+        <div class="tabbable-panel">
+          <div class="tabbable-line">
+            <ul class="nav nav-tabs ">
+              <li class="active"> <a href="#tab_eventdetail" data-toggle="tab"> Event Details </a> </li>
+              <li> <a href="#tab_findtime" data-toggle="tab"> Find a time</a> </li>
+            </ul>
+            <!--tab body here-->
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="btns">
+          <button type="button" class="btn btn-danger btn-save">Save</button>
+          <button type="button" class="btn btn-danger btn-discard">Discrad</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--content part start here-->
+<section class="midcontener">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="tab-content">
+          <div class="tab-pane active" id="tab_eventdetail">
+            <div class="row">
+              <div class="col-md-5 col-sm-5 col-xs-12">
+                <div class="contentbox">
+                  <form class="form-horizontal" action="" method="post">
+                    <label class="labelbold" for="registration-date">When</label>
+                    <div class="form-group registration-date">
+                      <div class="input-group registration-date-time">
+                        <div class="col-sm-4 padright5">
+                          <div class="input-group date" data-date-format="dd/mm/yyyy">
+                            <input  type="text" class="form-control frmcntrl-date datinput" placeholder="dd/mm/yyyy">
+                            <div class="input-group-addon adonnone" > </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-2 padleft5px padright5"> <span class="padleft5px padright5 frmcntrl-date text-center graytxt">at</span>
+                          <div class="input-group bootstrap-timepicker">
+                            <input type="text" class="form-control input-small frmcntrl-date datinput" placeholder="14:00">
+                          </div>
+                        </div>
+                        <div class="col-sm-4 padright5 padleft5px"> <i class="fa padleft5px padright5 frmcntrl-date"><img src="assets/images/arrow.gif" alt=""></i>
+                          <div class="input-group date" data-date-format="dd/mm/yyyy">
+                            <input  type="text" class="form-control frmcntrl-date datinput" placeholder="dd/mm/yyyy">
+                            <div class="input-group-addon adonnone" > </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-2 padleft5px padright5"> <span class="padleft5px padright5 frmcntrl-date text-center graytxt">at</span>
+                          <div class="input-group bootstrap-timepicker">
+                            <input type="text" class="form-control input-small frmcntrl-date datinput" placeholder="14:00">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div id="datetimepicker12" class="text-center"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 text-right"><a href="#" class="timezone">Time Zone</a></div>
+                  <div class="row">
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        <div class="checkbox">
+                          <input id="Allday" type="checkbox" checked="">
+                          <label for="Allday"> All Day </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="checkbox">
+                          <input id="Repeat" type="checkbox">
+                          <label for="Repeat"> Repeat </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="labelbold topmargin10">Event color</div>
+                      <div class="checkbox-inline checkbox checkbox-red">
+                        <input id="checkbox2" type="checkbox" checked>
+                        <label for="checkbox2"></label>
+                      </div>
+                      <div class="checkbox-inline checkbox checkbox-yellow">
+                        <input id="checkbox3" type="checkbox">
+                        <label for="checkbox3"></label>
+                      </div>
+                      <div class="checkbox-inline checkbox checkbox-green">
+                        <input id="checkbox4" type="checkbox">
+                        <label for="checkbox4"></label>
+                      </div>
+                      <div class="checkbox-inline checkbox checkbox-blue">
+                        <input id="checkbox5" type="checkbox">
+                        <label for="checkbox5"></label>
+                      </div>
+                      <div class="checkbox-inline checkbox checkbox-darkblue">
+                        <input id="checkbox6" type="checkbox">
+                        <label for="checkbox6"></label>
+                      </div>
+                      <div class="checkbox-inline checkbox checkbox-purple">
+                        <input id="checkbox7" type="checkbox">
+                        <label for="checkbox7"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="contentbox">
+                  <div class="form-group">
+                    <label for="Where">Where</label>
+                    <input type="Where" class="form-control sec-input" id="Location" placeholder="Enter Location" name="Location">
+                  </div>
+                  <div class="form-group">
+                    <label for="Calender">Calender</label>
+                    <select class="form-control sec-input" id="Calender">
+                      <option>Ana Sakac</option>
+                      <option>Ana Sakac</option>
+                      <option>Ana Sakac</option>
+                      <option>Ana Sakac</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="comment">Description</label>
+                    <textarea class="form-control" rows="2" id="Description"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <SECTION>
+                      <DIV id="dropzone">
+                        <FORM class="dropzone needsclick" id="demo-upload" action="/upload">
+                          <DIV class="dz-message needsclick"> Drop attachment here or <a href="" class="timezone">browse</a> </DIV>
+                        </FORM>
+                      </DIV>
+                    </SECTION>
+                  </div>
+                  <div class="form-group">
+                    <label for="Notification">Notification</label>
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <td class="col-sm-4"><select class="form-control graytxt" id="CAD" name="CAD">
+                              <option value="-1">Notification</option>
+                              <option selected="selected" value="Notification">Notification</option>
+                            </select></td>
+                          <td class="col-sm-3"><input type="text" class="form-control graytxt" id="" placeholder="10" name=""></td>
+                          <td class="col-sm-4"><select class="form-control graytxt" id="CAD" name="CAD">
+                              <option value="-1">Minute</option>
+                              <option selected="selected" value="Minute">Minute</option>
+                            </select></td>
+                          <td class="col-sm-1 vmiddle"><i class="fa fa-trash graytxt" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                          <td><select class="form-control graytxt" id="CAD" name="CAD">
+                              <option value="-1">Notification</option>
+                              <option selected="selected" value="Notification">Notification</option>
+                            </select></td>
+                          <td><input type="text" class="form-control graytxt" id="" placeholder="10" name=""></td>
+                          <td><select class="form-control graytxt" id="CAD" name="CAD">
+                              <option value="-1">Minute</option>
+                              <option selected="selected" value="Minute">Minute</option>
+                            </select></td>
+                          <td class="vmiddle"><i class="fa fa-plus graytxt" aria-hidden="true"></i></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="contentbox">
+                  <div class="form-group">
+                    <label for="Who">Who</label>
+                    <div class="icon-addon addon-lg">
+                      <input type="email" class="form-control" id="email" placeholder="Enter Guest Email Address" name="email">
+                      <i class="fa fa-plus faadd text-right" aria-hidden="true"></i> </div>
+                  </div>
+                  <section class="inner">
+                    <div class="form-group">
+                      <label for="Calender">Video Call</label>
+                      <a href=""> <i class="fa fa-trash graytxt" aria-hidden="true"></i></a> <a href=""> <i class="fa fa-edit graytxt" aria-hidden="true"></i> </a>
+                      <p>Join meeting:ana-sakac</p>
+                    </div>
+                  </section>
+                  <section class="">
+                    <label for="Calender">Guest can</label>
+                    <div class="row">
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="checkbox">
+                            <input id="checkbox1" type="checkbox" checked >
+                            <label for="checkbox1"> Modify event </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="checkbox">
+                            <input id="inviteother" type="checkbox">
+                            <label for="inviteother"> Invite others </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="checkbox">
+                            <input id="seeguestlist" type="checkbox">
+                            <label for="seeguestlist"> See guest list </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="innerguest">
+                    <label for="Calender">Visibility</label>
+                    <div class="row">
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="radio">
+                            <input type="radio" name="radio1" id="radio1" value="option1">
+                            <label for="radio1"> Calender default </label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" name="radio1" id="radio2" value="option2">
+                            <label for="radio2"> Public </label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" name="radio1" id="radio3" value="option3" >
+                            <label for="radio3"> Private </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="innerguest">
+                    <label for="Calender">Show me as</label>
+                    <div class="row">
+                      <div class="form-group">
+                        <div class="col-sm-12">
+                          <div class="radio">
+                            <input type="radio" name="Available" id="radio4" value="option4" checked="">
+                            <label for="radio4"> Available </label>
+                          </div>
+                          <div class="radio">
+                            <input type="radio" name="Available" id="radio5" value="option5" >
+                            <label for="radio5"> Busy </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="innerguest"></section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab_findtime">
+            <p> Coming Soon </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--content part end here-->
+<!--Footer Section-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12"> By default this event will follow the <a href="">sharing settings</a> of the calender:event details will be visible<br>
+        to anyone who can see details of other events in this calender. <a href="">Learn more.</a> </div>
+    </div>
+  </div>
+</footer>
+<!--Footer Section End-->
+<!--<script files start here>-->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/moment-with-locales.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+        $(function () {
+            $('#datetimepicker12').datetimepicker({
+                inline: true,
+                sideBySide: false
+            });
+        });
+    </script>
+<script src="assets/js/bootstrap-timepicker.js"></script>
+<script> $('.bootstrap-timepicker').timepicker();</script>
+<script src="assets/js/dropzone.js"></script>
+<script>
+var dropzone = new Dropzone('#demo-upload', {
+  previewTemplate: document.querySelector('#preview-template').innerHTML,
+  parallelUploads: 2,
+  thumbnailHeight: 120,
+  thumbnailWidth: 120,
+  maxFilesize: 3,
+  filesizeBase: 1000,
+  thumbnail: function(file, dataUrl) {
+    if (file.previewElement) {
+      file.previewElement.classList.remove("dz-file-preview");
+      var images = file.previewElement.querySelectorAll("[data-dz-thumbnail]");
+      for (var i = 0; i < images.length; i++) {
+        var thumbnailElement = images[i];
+        thumbnailElement.alt = file.name;
+        thumbnailElement.src = dataUrl;
+      }
+      setTimeout(function() { file.previewElement.classList.add("dz-image-preview"); }, 1);
+    }
+  }
+
+});
+
+
+// Now fake the file upload, since GitHub does not handle file uploads
+// and returns a 404
+
+var minSteps = 6,
+    maxSteps = 60,
+    timeBetweenSteps = 100,
+    bytesPerStep = 100000;
+
+dropzone.uploadFiles = function(files) {
+  var self = this;
+
+  for (var i = 0; i < files.length; i++) {
+
+    var file = files[i];
+    totalSteps = Math.round(Math.min(maxSteps, Math.max(minSteps, file.size / bytesPerStep)));
+
+    for (var step = 0; step < totalSteps; step++) {
+      var duration = timeBetweenSteps * (step + 1);
+      setTimeout(function(file, totalSteps, step) {
+        return function() {
+          file.upload = {
+            progress: 100 * (step + 1) / totalSteps,
+            total: file.size,
+            bytesSent: (step + 1) * file.size / totalSteps
+          };
+
+          self.emit('uploadprogress', file, file.upload.progress, file.upload.bytesSent);
+          if (file.upload.progress == 100) {
+            file.status = Dropzone.SUCCESS;
+            self.emit("success", file, 'success', null);
+            self.emit("complete", file);
+            self.processQueue();
+            //document.getElementsByClassName("dz-success-mark").style.opacity = "1";
+          }
+        };
+      }(file, totalSteps, step), duration);
+    }
+  }
+}
+</script>
+</body>
+</html>
